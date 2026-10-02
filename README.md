@@ -33,8 +33,9 @@ Versión de referencia: **.NET 10 / C# 14**.
 | --- | --- |
 | [01. Domain-Driven Design táctico](02-architecture-and-design-patterns/01-domain-driven-design/README.md) | Modelo anémico vs rico, entidades, value objects, agregados · [ejercicios](02-architecture-and-design-patterns/01-domain-driven-design/Ejercicios.md) |
 | [02. Arquitectura dirigida por eventos](02-architecture-and-design-patterns/02-event-driven-architecture/README.md) | Eventos vs comandos, Pub/Sub en memoria, outbox, idempotencia, reintentos y DLQ · [ejercicios](02-architecture-and-design-patterns/02-event-driven-architecture/Ejercicios.md) |
+| [03. Resiliencia de servicios con Polly](02-architecture-and-design-patterns/03-resiliencia-de-servicios/README.md) | Retry, backoff, jitter, circuit breaker, timeouts y pipelines HTTP con Polly 8 · [ejercicios](02-architecture-and-design-patterns/03-resiliencia-de-servicios/Ejercicios.md) |
 
-Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*), Clean y Hexagonal Architecture, resiliencia con Polly (*Retry*, *Circuit Breaker*, *Rate Limiting*).
+Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*), Clean y Hexagonal Architecture.
 
 ### 3. ASP.NET Core Web APIs ([`/03-aspnet-core-apis`](03-aspnet-core-apis/))
 

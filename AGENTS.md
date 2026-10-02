@@ -122,6 +122,27 @@ Uno o más <details><summary>Tema</summary> ... </details> con detalles avanzado
 
 -----
 
+## Estilo pedagógico (cómo explicar)
+
+**Antes de escribir una lección nueva, lee completa al menos una de estas lecciones modelo e imita su tono, ritmo y profundidad:**
+
+* [02-architecture-and-design-patterns/01-domain-driven-design/03-Value objects.md](02-architecture-and-design-patterns/01-domain-driven-design/03-Value%20objects.md)
+* [02-architecture-and-design-patterns/02-event-driven-architecture/02-Publish Subscribe en memoria.md](02-architecture-and-design-patterns/02-event-driven-architecture/02-Publish%20Subscribe%20en%20memoria.md)
+* [03-aspnet-core-apis/02-minimal-apis/03-Endpoint filters.md](03-aspnet-core-apis/02-minimal-apis/03-Endpoint%20filters.md)
+
+Principios:
+
+1. **Problema antes que solución.** Nunca empieces por la sintaxis. Muestra primero código "ingenuo" que falla o se degrada, con sus consecuencias concretas (qué excepción, qué dato se pierde, qué se cobra dos veces). La herramienta aparece como respuesta a ese dolor.
+2. **El porqué técnico siempre.** Cada regla viene con su causa: no "usa `AsReadOnly()`", sino "porque `IReadOnlyCollection<T>` solo oculta métodos y con un cast se recupera la `List<T>`".
+3. **Honestidad técnica.** Desmonta exageraciones ("desacoplamiento total", "es más rápido", "es la base de los microservicios"). Di qué gana y qué cuesta cada herramienta, con una tabla de *tradeoffs* cuando haya opciones.
+4. **Concreto sobre abstracto.** Ejemplos del negocio (pedidos, pagos, stock, matrículas), no `Foo`/`Bar`. Números reales en las salidas.
+5. **Contrastes visibles.** Antes/después, ❌/✔, tablas "X frente a Y", diagramas de texto para flujos, memoria u orden de ejecución.
+6. **Frases cortas y directas.** Una idea por oración. Negritas solo para lo que el lector no debe olvidar. Sin relleno ("es importante destacar que...", "en este apartado veremos...").
+7. **Criterio, no solo conocimiento.** Toda lección dice cuándo **no** usar la herramienta. El objetivo es que el lector sepa decidir, no solo escribir el código.
+8. **Corrige sin humillar.** Cuando una nota de clase tiene un error, nómbralo con precisión ("en la guía, `Problem("ID inválido")` pone el texto en `detail`"), explica por qué y muestra la versión correcta.
+
+-----
+
 ## Cómo procesar notas de clase (flujo principal)
 
 Cuando el usuario pegue una guía de sesión ("Continúa con este"):

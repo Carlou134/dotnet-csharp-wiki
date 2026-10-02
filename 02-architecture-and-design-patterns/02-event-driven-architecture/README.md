@@ -58,4 +58,4 @@ Los ejemplos completos son aplicaciones de consola (.NET 10).
 
 ## Después de esta carpeta
 
-Los siguientes pasos son llevar los eventos a un broker real (RabbitMQ o Azure Service Bus con MassTransit o Wolverine), procesar en segundo plano con `BackgroundService` y coordinar procesos largos con sagas.
+Continúa con [Resiliencia de servicios con Polly](../03-resiliencia-de-servicios/README.md) para proteger llamadas remotas con retry, circuit breaker y timeouts. Después puedes llevar los eventos a un broker real (RabbitMQ o Azure Service Bus con MassTransit o Wolverine), procesar en segundo plano con `BackgroundService` y coordinar procesos largos con sagas.

@@ -433,4 +433,4 @@ Si el proceso se cae entre marcar y publicar, el evento queda como enviado pero 
 
 ## Siguiente lección
 
-Terminaste el módulo. Para practicar con los ejercicios de clase: [Ejercicios de eventos y Pub/Sub](Ejercicios.md). Vuelve al [índice del módulo](README.md).
+Terminaste el módulo. Para practicar con los ejercicios de clase: [Ejercicios de eventos y Pub/Sub](Ejercicios.md). Después continúa con [Resiliencia de servicios con Polly](../03-resiliencia-de-servicios/README.md) o vuelve al [índice del módulo](README.md).
