@@ -66,4 +66,4 @@ Todas las lecciones tienen la misma estructura, así sabes dónde buscar cada co
 
 ## Después de esta carpeta
 
-Terminaste el bloque de C# Core & Runtime. Los siguientes pasos naturales, según el plan del repositorio, son la arquitectura y los patrones de diseño (SOLID en profundidad, patrones GoF, Clean Architecture) y ASP.NET Core.
+Terminaste el bloque de C# Core & Runtime. Los siguientes pasos naturales, según el plan del repositorio, son la arquitectura y los patrones de diseño (SOLID en profundidad, patrones GoF, Clean Architecture) y ASP.NET Core. Puedes empezar por modelar el dominio: [Domain-Driven Design táctico](../../02-architecture-and-design-patterns/01-domain-driven-design/README.md).

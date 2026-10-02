@@ -1,31 +1,72 @@
-# ⚡ .NET Core & C# Enterprise Architecture Wiki
+# ⚡ .NET & C# Enterprise Architecture Wiki
 
-Repositorio personal de apuntes, guías rápidas (*cheatsheets*) y patrones de diseño para el desarrollo backend enterprise con C#, .NET Core, Clean Architecture y bases de datos relacionales.
+Repositorio personal de apuntes para el desarrollo backend con C# y .NET: desde los fundamentos del lenguaje hasta el diseño del dominio y de APIs. Cada lección sigue el mismo formato de estudio, con ejemplos que compilan, errores comunes, preguntas de entrevista y práctica con la solución plegada.
 
----
+Versión de referencia: **.NET 10 / C# 14**.
 
-## 📂 Estructura del Conocimiento
+-----
 
-### 1. C# Core & Runtime (`/01-csharp-core-and-runtime`)
-- Tipado estático, *Generics*, *Delegates*, *Events* y expresiones lambda.
-- Consultas eficientes con **LINQ** en memoria y diferidas (`IEnumerable` vs `IQueryable`).
-- Asincronía con `async/await`, `Task`, `CancellationToken` y manejo de hilos.
-- Aritmética financiera, precisión decimal y prevención de errores de redondeo.
+## 📂 Estructura
 
-### 2. Arquitectura & Patrones de Diseño (`/02-architecture-and-design-patterns`)
-- **Principios SOLID** con ejemplos prácticos en C#.
-- **Patrones GoF** más utilizados (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*).
-- **Clean Architecture:** Separación de capas (Domain, Application, Infrastructure, API).
-- **Patrones de Resiliencia:** *Retry*, *Circuit Breaker* y *Rate Limiting* con Polly.
+### 1. C# Core & Runtime ([`/01-csharp-core-and-runtime`](01-csharp-core-and-runtime/README.md))
 
-### 3. ASP.NET Core Web APIs (`/03-aspnet-core-apis`)
-- Construcción de APIs RESTful, DTOs y validaciones con **FluentValidation**.
-- Inyección de dependencias nativa y ciclo de vida (*Transient*, *Scoped*, *Singleton*).
-- Seguridad: Autenticación con **JWT**, autorización basada en roles (RBAC) y OWASP Top 10.
-- Auditoría, registros estructurados con **Serilog** y Health Checks.
+12 módulos, 53 lecciones:
+
+| Módulo | Temas |
+| --- | --- |
+| [00. Introducción](01-csharp-core-and-runtime/00-introduccion/README.md) | Qué es C# y .NET, entorno, primer programa, paradigmas |
+| [01. Tipos y variables](01-csharp-core-and-runtime/01-tipos-y-variables/README.md) | Tipos de valor y referencia, numéricos, texto, conversiones |
+| [02. Control de flujo](01-csharp-core-and-runtime/02-control-de-flujo/README.md) | Condicionales, `switch` y patrones, bucles |
+| [03. Métodos](01-csharp-core-and-runtime/03-metodos/README.md) | Parámetros, sobrecarga, `ref`/`out`, funciones locales |
+| [04. POO](01-csharp-core-and-runtime/04-poo/README.md) | Clases, encapsulación, herencia, polimorfismo, interfaces |
+| [05. Tipos avanzados](01-csharp-core-and-runtime/05-tipos-avanzados/README.md) | Enums, structs y records, nulos, genéricos, varianza |
+| [06. Colecciones](01-csharp-core-and-runtime/06-colecciones/README.md) | Listas, diccionarios, conjuntos, colas, pilas, iteradores |
+| [07. LINQ](01-csharp-core-and-runtime/07-linq/README.md) | Filtrar, ordenar, paginar, agrupar y unir |
+| [08. Excepciones](01-csharp-core-and-runtime/08-excepciones/README.md) | Manejo, lanzamiento y excepciones propias |
+| [09. Delegados y eventos](01-csharp-core-and-runtime/09-delegados-y-eventos/README.md) | Delegados, lambdas, eventos |
+| [10. Asincronía y archivos](01-csharp-core-and-runtime/10-asincronia-y-archivos/README.md) | `async`/`await`, cancelación, `IProgress<T>`, streams y archivos · [ejercicios](01-csharp-core-and-runtime/10-asincronia-y-archivos/Ejercicios.md) |
+| [11. Código limpio](01-csharp-core-and-runtime/11-codigo-limpio/README.md) | Nombres, code smells, DRY/KISS/SOLID, sintaxis moderna |
+
+### 2. Arquitectura & Patrones de Diseño ([`/02-architecture-and-design-patterns`](02-architecture-and-design-patterns/))
+
+| Módulo | Temas |
+| --- | --- |
+| [01. Domain-Driven Design táctico](02-architecture-and-design-patterns/01-domain-driven-design/README.md) | Modelo anémico vs rico, entidades, value objects, agregados · [ejercicios](02-architecture-and-design-patterns/01-domain-driven-design/Ejercicios.md) |
+| [02. Arquitectura dirigida por eventos](02-architecture-and-design-patterns/02-event-driven-architecture/README.md) | Eventos vs comandos, Pub/Sub en memoria, outbox, idempotencia, reintentos y DLQ · [ejercicios](02-architecture-and-design-patterns/02-event-driven-architecture/Ejercicios.md) |
+
+Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*), Clean y Hexagonal Architecture, resiliencia con Polly (*Retry*, *Circuit Breaker*, *Rate Limiting*).
+
+### 3. ASP.NET Core Web APIs ([`/03-aspnet-core-apis`](03-aspnet-core-apis/))
+
+| Módulo | Temas |
+| --- | --- |
+| [01. Diseño de APIs REST](03-aspnet-core-apis/01-diseno-de-apis-rest/README.md) | Principios REST, códigos de estado, ProblemDetails, versionamiento, HATEOAS · [ejercicios](03-aspnet-core-apis/01-diseno-de-apis-rest/Ejercicios.md) |
+| [02. Minimal APIs](03-aspnet-core-apis/02-minimal-apis/README.md) | Endpoints y grupos de rutas, Typed Results, endpoint filters · [ejercicios](03-aspnet-core-apis/02-minimal-apis/Ejercicios.md) |
+
+Planificado: validación (FluentValidation y validación integrada de .NET 10), inyección de dependencias y ciclos de vida, autenticación con JWT y autorización, OWASP Top 10, logging estructurado con Serilog, Health Checks.
 
 ### 4. Acceso a Datos & Transacciones (`/04-data-access-and-transactions`)
-- **Entity Framework Core:** Mapeo, relaciones, *Migrations*, `AsNoTracking` y consultas optimizadas.
-- **Transacciones ACID:** Manejo explícito con `IDbContextTransaction` y `TransactionScope`.
-- **Concurrencia:** Estrategias de bloqueo optimista (`RowVersion`) y pesimista.
-- **Rendimiento SQL:** Solución al problema N+1, indexación y análisis de planes de ejecución.
+
+Planificado: Entity Framework Core (mapeo, relaciones, *migrations*, `AsNoTracking`), transacciones ACID (`IDbContextTransaction`, `TransactionScope`), concurrencia optimista (`RowVersion`) y pesimista, rendimiento SQL (N+1, índices, planes de ejecución).
+
+-----
+
+## 📖 Formato de las lecciones
+
+Cada módulo tiene un `README.md` (orden de lectura y mapa del tema), un `Glosario.md` y, cuando hay material de clase, un `Ejercicios.md` con ejercicios guiados y retos.
+
+Cada lección tiene las mismas 13 secciones:
+
+1. **En una frase**
+2. **Antes de empezar** (requisitos y palabras nuevas)
+3. **El problema**
+4. **Cómo funciona**
+5. **Ejemplo completo** (código que compila)
+6. **Errores comunes** (qué pasa, por qué y cómo se arregla)
+7. **Según la versión** de C# o de .NET
+8. **Cuándo sí y cuándo no**
+9. **Resumen en 5 líneas**
+10. **Para profundizar** (plegado)
+11. **En entrevista** (respuesta junior, respuesta semi-senior y preguntas de seguimiento)
+12. **Práctica** (solución plegada)
+13. **Siguiente lección**

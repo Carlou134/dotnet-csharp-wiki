@@ -89,6 +89,13 @@ Console.WriteLine("3. Después: " + clima);
 
 Desde el punto de vista de tu código, se lee como si fuera secuencial. La diferencia es que, mientras espera, **nadie queda bloqueado**.
 
+**La metáfora del restaurante.** Un mesero (el hilo) toma tu pedido y lo lleva a la cocina (la base de datos):
+
+* **Sincrónico:** el mesero se queda parado en la cocina 20 minutos esperando tu plato. Si llegan clientes nuevos, nadie los atiende.
+* **Asíncrono:** el mesero deja el pedido (`await`) y vuelve al salón a atender otras mesas. Cuando la cocina toca la campana, **el primer mesero libre** (no necesariamente el mismo) te lleva el plato.
+
+La cocina no cocina más rápido: lo que mejora es cuántos clientes atiende el restaurante con los mismos meseros. Eso es la **escalabilidad**: async no acelera una consulta, permite que el servidor atienda muchas más peticiones a la vez sin quedarse sin hilos (*thread starvation*).
+
 ```text
 Sincrónico:  [hilo ocupado esperando ████████████] → sigue
 Asíncrono:   [inicia] → hilo libre para otras cosas … [la red responde] → continúa

@@ -201,6 +201,29 @@ catch (Exception primera)
 
 `WhenAll` siempre espera a que **todas** terminen (bien o mal) antes de completarse.
 
+### Informar el progreso: `IProgress<T>`
+
+Una operación larga puede avisar cuánto avanzó sin saber **cómo** se muestra ese avance (consola, barra en una ventana, mensaje en una web):
+
+```csharp
+var progreso = new Progress<int>(porcentaje => Console.Write($"\rSubiendo: {porcentaje}%   "));
+await SubirArchivoAsync(progreso);
+Console.WriteLine("\nListo");
+
+static async Task SubirArchivoAsync(IProgress<int>? progreso = null, CancellationToken ct = default)
+{
+    for (int i = 0; i <= 100; i += 20)
+    {
+        await Task.Delay(300, ct);   // simula un bloque enviado por la red
+        progreso?.Report(i);         // informa; no sabe quién escucha ni cómo se muestra
+    }
+}
+```
+
+* El método recibe la **interfaz** `IProgress<T>` y solo llama a `Report`: queda desacoplado de la presentación.
+* `Progress<T>` ejecuta la lambda en el **contexto donde se creó**. En una app de escritorio, eso es el hilo de la interfaz gráfica, así que puede actualizar controles sin problemas. En consola (sin contexto de sincronización) la lambda corre en el *thread pool*: los reportes pueden llegar desordenados o después de que el método terminó. Si en consola necesitas orden estricto, implementa `IProgress<T>` con una clase que escriba directamente: `class ProgresoConsola : IProgress<int> { public void Report(int v) => Console.Write($"\r{v}%"); }`.
+* Por convención, `IProgress<T>` y `CancellationToken` van al final de los parámetros y son opcionales.
+
 ### Limitar la concurrencia
 
 Iniciar 10.000 tareas a la vez contra una API puede saturarla (o hacer que te bloquee). `Parallel.ForEachAsync` (.NET 6) procesa una colección con un máximo de operaciones simultáneas:

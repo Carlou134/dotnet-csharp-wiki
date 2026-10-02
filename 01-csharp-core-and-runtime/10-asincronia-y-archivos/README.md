@@ -26,6 +26,8 @@ Si en algún momento aparece una palabra que no conoces, búscala en el [Glosari
 | [3. Archivos y streams](03-Archivos%20y%20streams.md) | `Stream`, `FileStream`, `FileMode`/`FileAccess`, leer y escribir bytes, `Flush`, `Seek` | Excepciones, `using` |
 | [4. Archivos de texto y la clase File](04-Archivos%20de%20texto%20y%20la%20clase%20File.md) | `File`, `ReadLines`, `Path`, `Directory`, `FileInfo`, `StreamReader`/`StreamWriter` y codificaciones | Archivos y streams |
 
+Para practicar más: [Ejercicios de asincronía](Ejercicios.md), con 9 ejercicios guiados y 3 retos (todos con la solución plegada).
+
 -----
 
 ## El mapa completo en una mirada
