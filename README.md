@@ -44,8 +44,9 @@ Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Bu
 | --- | --- |
 | [01. Diseño de APIs REST](03-aspnet-core-apis/01-diseno-de-apis-rest/README.md) | Principios REST, códigos de estado, ProblemDetails, versionamiento, HATEOAS · [ejercicios](03-aspnet-core-apis/01-diseno-de-apis-rest/Ejercicios.md) |
 | [02. Minimal APIs](03-aspnet-core-apis/02-minimal-apis/README.md) | Endpoints y grupos de rutas, Typed Results, endpoint filters · [ejercicios](03-aspnet-core-apis/02-minimal-apis/Ejercicios.md) |
+| [03. Seguridad de APIs](03-aspnet-core-apis/03-seguridad-de-apis/README.md) | OAuth 2.0, OpenID Connect, JWT bearer, claims, roles y políticas · [ejercicios](03-aspnet-core-apis/03-seguridad-de-apis/Ejercicios.md) |
 
-Planificado: validación (FluentValidation y validación integrada de .NET 10), inyección de dependencias y ciclos de vida, autenticación con JWT y autorización, OWASP Top 10, logging estructurado con Serilog, Health Checks.
+Planificado: validación (FluentValidation y validación integrada de .NET 10), inyección de dependencias y ciclos de vida, OWASP Top 10, logging estructurado con Serilog, Health Checks.
 
 ### 4. Acceso a Datos & Transacciones (`/04-data-access-and-transactions`)
 

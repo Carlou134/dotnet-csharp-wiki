@@ -59,4 +59,4 @@ Los ejemplos completos son el `Program.cs` de un proyecto `dotnet new web`.
 
 ## Después de esta carpeta
 
-Los siguientes pasos naturales son la validación (FluentValidation o la integrada de .NET 10), la autenticación con JWT y la autorización con políticas, y conectar los endpoints a datos reales con EF Core.
+Continúa con [Seguridad de APIs](../03-seguridad-de-apis/README.md) para agregar autenticación JWT bearer y autorización con políticas. Después puedes estudiar validación avanzada y conectar los endpoints a datos reales con EF Core.

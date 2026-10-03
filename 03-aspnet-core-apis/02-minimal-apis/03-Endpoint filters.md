@@ -543,4 +543,4 @@ El filtro del grupo es el más externo; entre los del endpoint, el primero regis
 
 ## Siguiente lección
 
-Terminaste el módulo. Para practicar con los ejercicios de clase: [Ejercicios de minimal APIs](Ejercicios.md). Vuelve al [índice del módulo](README.md).
+Terminaste el módulo. Para practicar con los ejercicios de clase: [Ejercicios de minimal APIs](Ejercicios.md). Después continúa con [Seguridad de APIs](../03-seguridad-de-apis/README.md) o vuelve al [índice del módulo](README.md).
