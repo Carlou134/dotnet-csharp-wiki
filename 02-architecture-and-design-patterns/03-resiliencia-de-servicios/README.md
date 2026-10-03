@@ -55,4 +55,4 @@ Los ejemplos usan Polly 8. Para HTTP se emplea `Microsoft.Extensions.Http.Resili
 
 ## Después de esta carpeta
 
-La resiliencia evita que un fallo remoto se propague sin control, pero no reemplaza la observabilidad ni corrige una dependencia. Continúa con *health checks*, métricas, trazas distribuidas y pruebas de caos; para proteger la entrada de una API, estudia *rate limiting* en ASP.NET Core.
+La resiliencia evita que un fallo remoto se propague sin control, pero no explica por qué ocurrió. Continúa con [Observabilidad con OpenTelemetry](../04-observabilidad-con-opentelemetry/README.md) para recopilar métricas, trazas y logs correlacionados. Después estudia *health checks*, pruebas de caos y *rate limiting* en ASP.NET Core.

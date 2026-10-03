@@ -317,4 +317,4 @@ Porque ignora el token. Debe ser `await Task.Delay(5000, cancellationToken)` den
 
 ## Siguiente lección
 
-Terminaste el módulo. Continúa con [Ejercicios de resiliencia](Ejercicios.md) y vuelve al [índice del módulo](README.md).
+Terminaste el módulo. Continúa con [Ejercicios de resiliencia](Ejercicios.md), sigue con [Observabilidad con OpenTelemetry](../04-observabilidad-con-opentelemetry/README.md) o vuelve al [índice del módulo](README.md).
