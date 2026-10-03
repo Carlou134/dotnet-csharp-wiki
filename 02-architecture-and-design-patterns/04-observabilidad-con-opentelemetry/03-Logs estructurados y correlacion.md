@@ -316,4 +316,4 @@ No. Solo demuestra emisión local. Faltan almacenamiento, consultas, correlació
 
 ## Siguiente lección
 
-Terminaste el módulo. Continúa con [Ejercicios de observabilidad](Ejercicios.md) y vuelve al [índice del módulo](README.md).
+Continúa con [Cloud native y contenedores](../05-cloud-native-y-contenedores/README.md). También puedes resolver los [ejercicios de observabilidad](Ejercicios.md) o volver al [índice del módulo](README.md).

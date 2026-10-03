@@ -35,6 +35,7 @@ Versión de referencia: **.NET 10 / C# 14**.
 | [02. Arquitectura dirigida por eventos](02-architecture-and-design-patterns/02-event-driven-architecture/README.md) | Eventos vs comandos, Pub/Sub en memoria, outbox, idempotencia, reintentos y DLQ · [ejercicios](02-architecture-and-design-patterns/02-event-driven-architecture/Ejercicios.md) |
 | [03. Resiliencia de servicios con Polly](02-architecture-and-design-patterns/03-resiliencia-de-servicios/README.md) | Retry, backoff, jitter, circuit breaker, timeouts y pipelines HTTP con Polly 8 · [ejercicios](02-architecture-and-design-patterns/03-resiliencia-de-servicios/Ejercicios.md) |
 | [04. Observabilidad con OpenTelemetry](02-architecture-and-design-patterns/04-observabilidad-con-opentelemetry/README.md) | Trazas distribuidas, métricas, logs estructurados, correlación y exportación OTLP · [ejercicios](02-architecture-and-design-patterns/04-observabilidad-con-opentelemetry/Ejercicios.md) |
+| [05. Cloud native y contenedores](02-architecture-and-design-patterns/05-cloud-native-y-contenedores/README.md) | Docker, builds multi-stage, imágenes seguras, Native AOT y diseño cloud native · [ejercicios](02-architecture-and-design-patterns/05-cloud-native-y-contenedores/Ejercicios.md) |
 
 Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*), Clean y Hexagonal Architecture.
 

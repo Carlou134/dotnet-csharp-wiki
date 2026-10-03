@@ -55,4 +55,4 @@ Todas las lecciones siguen las 13 secciones de la wiki. Los ejemplos son minimal
 
 ## Después de esta carpeta
 
-Con telemetría emitida y correlacionada, el siguiente paso es operarla: definir SLI/SLO, alertas accionables, paneles, retención, muestreo y protección de datos sensibles. Complementa el diagnóstico con *health checks* y pruebas de carga o caos.
+Continúa con [Cloud native y contenedores](../05-cloud-native-y-contenedores/README.md) para empaquetar y operar APIs .NET. Allí conectarás observabilidad, resiliencia, configuración externa y despliegues reemplazables.
