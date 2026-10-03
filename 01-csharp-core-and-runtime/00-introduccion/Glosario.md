@@ -16,7 +16,15 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **CLI `dotnet`.** La herramienta de línea de comandos del SDK: `dotnet new`, `dotnet build`, `dotnet run`, `dotnet publish`.
 
+**CIL (Common Intermediate Language):** código intermedio y portable emitido por los compiladores .NET. ([CLR y compilación](06-CLR%20compilacion%20y%20sistema%20de%20tipos.md))
+
+**CLS (Common Language Specification):** subconjunto de reglas del CTS para crear APIs interoperables entre lenguajes .NET. ([CLR y compilación](06-CLR%20compilacion%20y%20sistema%20de%20tipos.md))
+
 **CLR (Common Language Runtime).** El motor de .NET que carga el IL, lo compila con el JIT, administra la memoria y maneja excepciones.
+
+**CoreCLR:** implementación del CLR usada por .NET moderno. ([CLR y compilación](06-CLR%20compilacion%20y%20sistema%20de%20tipos.md))
+
+**CTS (Common Type System):** reglas comunes para declarar, usar y administrar tipos en .NET. ([CLR y compilación](06-CLR%20compilacion%20y%20sistema%20de%20tipos.md))
 
 **Comentario.** Texto dentro del código que el compilador ignora. En C#: `//`, `/* */` y `///` (documentación XML).
 
@@ -34,6 +42,8 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **GC (Garbage Collector, recolector de basura).** Parte del CLR que libera automáticamente la memoria de los objetos que ya no se usan.
 
+**global.json:** archivo que selecciona una versión o política de resolución del SDK para la CLI. ([SDK, CLI, proyectos y NuGet](07-SDK%20CLI%20proyectos%20y%20NuGet.md))
+
 **IDE.** Entorno de desarrollo integrado: editor, compilador, depurador y herramientas en un solo programa. Por ejemplo, Visual Studio o Rider.
 
 **IL (Intermediate Language).** Código intermedio, independiente del procesador, que genera el compilador de C#. También se llama CIL o MSIL.
@@ -50,6 +60,8 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **Método.** Bloque de código con nombre que realiza una tarea. `WriteLine` es un método de la clase `Console`.
 
+**MSBuild:** motor que evalúa proyectos y ejecuta objetivos de restauración, compilación y publicación. ([SDK, CLI, proyectos y NuGet](07-SDK%20CLI%20proyectos%20y%20NuGet.md))
+
 **Native AOT.** Modo de compilación que genera código máquina antes de distribuir la app, sin JIT en ejecución.
 
 **.NET.** Plataforma de desarrollo de Microsoft, gratuita, de código abierto y multiplataforma: compilador, runtime y librerías.
@@ -58,6 +70,8 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **NuGet.** El gestor de paquetes de .NET. Permite agregar librerías de terceros a un proyecto.
 
+**PackageReference:** elemento del proyecto que declara una dependencia NuGet y su versión. ([SDK, CLI, proyectos y NuGet](07-SDK%20CLI%20proyectos%20y%20NuGet.md))
+
 **Paradigma.** Una forma o estilo de organizar y pensar el código.
 
 **POO (programación orientada a objetos).** Paradigma que organiza el código en objetos con estado y comportamiento, basado en clases.
@@ -65,6 +79,8 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 **Punto de entrada.** El lugar donde empieza a ejecutarse un programa: el método `Main` o las top-level statements.
 
 **Runtime.** Lo mínimo necesario para ejecutar una app .NET ya compilada. No incluye el compilador.
+
+**Restore:** resolución y descarga de dependencias declaradas por el proyecto. ([SDK, CLI, proyectos y NuGet](07-SDK%20CLI%20proyectos%20y%20NuGet.md))
 
 **SDK (Software Development Kit).** Todo lo necesario para desarrollar en .NET: compilador, MSBuild, runtime y la CLI `dotnet`.
 

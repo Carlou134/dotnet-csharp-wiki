@@ -8,7 +8,7 @@ Fundamentos del lenguaje C# y de la plataforma .NET, desde el primer programa ha
 
 | Módulo | Contenido | Lecciones |
 | --- | --- | --- |
-| [00. Introducción](00-introduccion/README.md) | C# y .NET, entorno, primer programa, paradigmas | 4 |
+| [00. Introducción](00-introduccion/README.md) | C# y .NET, entorno, paradigmas, CLR, compilación, CLI, proyectos y NuGet | 7 |
 | [01. Tipos y variables](01-tipos-y-variables/README.md) | Variables, valor frente a referencia, conversiones, números, texto | 6 |
 | [02. Control de flujo](02-control-de-flujo/README.md) | Lógica booleana, condicionales, arrays, bucles | 4 |
 | [03. Métodos](03-metodos/README.md) | Definir y llamar, opcionales y sobrecarga, retorno y `out`, lambdas | 4 |
@@ -21,7 +21,7 @@ Fundamentos del lenguaje C# y de la plataforma .NET, desde el primer programa ha
 | [10. Asincronía y archivos](10-asincronia-y-archivos/README.md) | `async`/`await`, concurrencia y cancelación, streams, archivos de texto | 4 |
 | [11. Código limpio](11-codigo-limpio/README.md) | Nombres y code smells, DRY/KISS y refactoring, sintaxis moderna | 3 |
 
-Total: 53 lecciones.
+Total: 56 lecciones.
 
 -----
 

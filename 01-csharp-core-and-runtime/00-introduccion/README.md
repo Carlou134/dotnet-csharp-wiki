@@ -1,6 +1,6 @@
 # Introducción a C# y .NET
 
-En esta carpeta aprendes **qué son C# y .NET y cómo se relacionan**, a **preparar tu entorno** para compilar y ejecutar código, a escribir tu **primer programa de consola** (mostrar texto, leer al usuario, comentar) y a reconocer los **paradigmas de programación** que C# combina. Es el punto de partida de todo lo demás.
+En esta carpeta aprendes **qué son C# y .NET y cómo se relacionan**, a preparar el entorno, escribir tu primer programa y reconocer paradigmas. Después profundizas en la evolución de .NET, el recorrido Roslyn–CIL–CLR, el sistema de tipos común, el SDK, la CLI, los proyectos y NuGet.
 
 -----
 
@@ -25,16 +25,22 @@ Si en algún momento aparece una palabra que no conoces, búscala en el [Glosari
 | [2. Preparar el entorno](02-Preparar%20el%20entorno.md) | Instalar el SDK, la CLI `dotnet`, el `.csproj`, editores y atajos | Qué es C# y .NET |
 | [3. Tu primer programa](03-Tu%20primer%20programa.md) | `WriteLine`, `ReadLine`, secuencias de escape, top-level statements, comentarios | Preparar el entorno |
 | [4. Paradigmas de programación](04-Paradigmas%20de%20programacion.md) | Estructurado, POO, funcional, eventos y AOP en C# | Tu primer programa |
+| [5. Plataforma .NET y su evolución](05-Plataforma%20NET%20y%20evolucion.md) | .NET moderno frente a .NET Framework, workloads, soporte y uso empresarial | Qué es C# y .NET |
+| [6. CLR, compilación y sistema de tipos](06-CLR%20compilacion%20y%20sistema%20de%20tipos.md) | Roslyn, CIL, ensamblados, CLR, JIT, CTS y CLS | Plataforma .NET |
+| [7. SDK, CLI, proyectos y NuGet](07-SDK%20CLI%20proyectos%20y%20NuGet.md) | `.csproj`, MSBuild, `bin`/`obj`, `global.json`, comandos y paquetes | CLR y compilación |
 
 -----
 
 ## El mapa completo en una mirada
 
 ```
-Program.cs ──► compilador ──► .dll (IL) ──► CLR + JIT ──► código máquina
+Program.cs ──► Roslyn ──► ensamblado (CIL + metadatos) ──► CLR + JIT ──► CPU
 
 SDK            ->  "lo que necesito para desarrollar" (dotnet new / build / run)
 Runtime        ->  "lo que necesito para ejecutar"
+CTS / CLS      ->  tipos comunes / reglas públicas interoperables
+MSBuild        ->  evalúa el .csproj y ejecuta el proceso de construcción
+NuGet          ->  restaura dependencias declaradas como PackageReference
 Console        ->  WriteLine / Write (salida), ReadLine (entrada, siempre string)
 Comentarios    ->  //  /* */  ///
 
@@ -69,4 +75,4 @@ Todas las lecciones tienen la misma estructura, así sabes dónde buscar cada co
 
 ## Después de esta carpeta
 
-Ya sabes compilar, ejecutar y escribir un programa que conversa con el usuario. El siguiente paso es entender cómo C# representa los datos: [Tipos y variables](../01-tipos-y-variables/README.md).
+Ya distingues lenguaje, plataforma, runtime, SDK y proyecto. El siguiente paso es entender cómo C# representa los datos: [Tipos y variables](../01-tipos-y-variables/README.md).

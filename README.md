@@ -10,11 +10,11 @@ Versión de referencia: **.NET 10 / C# 14**.
 
 ### 1. C# Core & Runtime ([`/01-csharp-core-and-runtime`](01-csharp-core-and-runtime/README.md))
 
-12 módulos, 53 lecciones:
+12 módulos, 56 lecciones:
 
 | Módulo | Temas |
 | --- | --- |
-| [00. Introducción](01-csharp-core-and-runtime/00-introduccion/README.md) | Qué es C# y .NET, entorno, primer programa, paradigmas |
+| [00. Introducción](01-csharp-core-and-runtime/00-introduccion/README.md) | Plataforma .NET, CLR, compilación, sistema de tipos, SDK, CLI, proyectos y NuGet |
 | [01. Tipos y variables](01-csharp-core-and-runtime/01-tipos-y-variables/README.md) | Tipos de valor y referencia, numéricos, texto, conversiones |
 | [02. Control de flujo](01-csharp-core-and-runtime/02-control-de-flujo/README.md) | Condicionales, `switch` y patrones, bucles |
 | [03. Métodos](01-csharp-core-and-runtime/03-metodos/README.md) | Parámetros, sobrecarga, `ref`/`out`, funciones locales |
@@ -39,19 +39,24 @@ Versión de referencia: **.NET 10 / C# 14**.
 
 Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*), Clean y Hexagonal Architecture.
 
-### 3. ASP.NET Core Web APIs ([`/03-aspnet-core-apis`](03-aspnet-core-apis/))
+### 3. ASP.NET Core ([`/03-aspnet-core-apis`](03-aspnet-core-apis/))
 
 | Módulo | Temas |
 | --- | --- |
+| [00. Fundamentos de ASP.NET Core](03-aspnet-core-apis/00-fundamentos-de-aspnet-core/README.md) | Host, configuración, middleware, modelos de aplicación, MVC, routing y Razor |
 | [01. Diseño de APIs REST](03-aspnet-core-apis/01-diseno-de-apis-rest/README.md) | Principios REST, códigos de estado, ProblemDetails, versionamiento, HATEOAS · [ejercicios](03-aspnet-core-apis/01-diseno-de-apis-rest/Ejercicios.md) |
 | [02. Minimal APIs](03-aspnet-core-apis/02-minimal-apis/README.md) | Endpoints y grupos de rutas, Typed Results, endpoint filters · [ejercicios](03-aspnet-core-apis/02-minimal-apis/Ejercicios.md) |
 | [03. Seguridad de APIs](03-aspnet-core-apis/03-seguridad-de-apis/README.md) | OAuth 2.0, OpenID Connect, JWT bearer, claims, roles y políticas · [ejercicios](03-aspnet-core-apis/03-seguridad-de-apis/Ejercicios.md) |
 
 Planificado: validación (FluentValidation y validación integrada de .NET 10), inyección de dependencias y ciclos de vida, OWASP Top 10, logging estructurado con Serilog, Health Checks.
 
-### 4. Acceso a Datos & Transacciones (`/04-data-access-and-transactions`)
+### 4. Acceso a Datos & Transacciones ([`/04-data-access-and-transactions`](04-data-access-and-transactions/README.md))
 
-Planificado: Entity Framework Core (mapeo, relaciones, *migrations*, `AsNoTracking`), transacciones ACID (`IDbContextTransaction`, `TransactionScope`), concurrencia optimista (`RowVersion`) y pesimista, rendimiento SQL (N+1, índices, planes de ejecución).
+| Módulo | Temas |
+| --- | --- |
+| [01. Entity Framework Core](04-data-access-and-transactions/01-entity-framework-core/README.md) | `DbContext`, proveedores, migraciones, consultas asíncronas y CRUD seguro con MVC |
+
+Planificado: relaciones, transacciones ACID, concurrencia optimista, rendimiento SQL, N+1, índices y planes de ejecución.
 
 -----
 

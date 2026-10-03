@@ -458,4 +458,4 @@ int Incrementar(int x)
 
 ## Siguiente lección
 
-Terminaste la introducción. Continúa con [Tipos y variables](../01-tipos-y-variables/README.md).
+[Plataforma .NET y su evolución](05-Plataforma%20NET%20y%20evolucion.md)
