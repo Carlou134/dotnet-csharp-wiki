@@ -35,10 +35,10 @@ La configuración puede combinar `appsettings.json`, archivos por entorno, secre
 
 ### 5. Pipeline
 ```text
-solicitud -> excepción -> HTTPS -> estáticos -> auth -> routing/endpoint
-respuesta <-           <-       <-          <-      <-
+solicitud -> excepción -> HTTPS -> estáticos -> routing -> authentication -> authorization -> endpoint
+respuesta <-           <-       <-          <-        <-                <-               <-
 ```
-El orden importa porque cada middleware decide si continúa, modifica la respuesta o corta el pipeline.
+El orden importa porque cada middleware decide si continúa, modifica la respuesta o corta el pipeline. Routing va antes de autorización porque esta necesita saber qué endpoint se eligió para leer su policy (`RequireAuthorization`, `[Authorize]`).
 
 ### 6. `launchSettings.json`
 Define perfiles locales para herramientas. No se publica como configuración de producción y no garantiza los puertos del despliegue.

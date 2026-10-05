@@ -212,7 +212,8 @@ Arreglo: especifica Duende, su modelo de licencia y el costo de operación propi
 
 * **ASP.NET Core 5:** la autorización por policies, requirements y handlers ya era el modelo central.
 * **ASP.NET Core 6 en adelante:** minimal APIs aplican policies con `RequireAuthorization`.
-* **.NET 10:** `AddAuthorizationBuilder` permite registrar policies de forma fluida; Duende/Auth0 tienen ciclos y licencias independientes del runtime.
+* **.NET 7:** `AddAuthorizationBuilder` permite registrar policies de forma fluida.
+* **.NET 10:** el modelo de policies se mantiene; Duende/Auth0 tienen ciclos y licencias independientes del runtime.
 
 -----
 

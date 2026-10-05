@@ -97,7 +97,7 @@ El access token viaja normalmente así:
 Authorization: Bearer access-token
 ```
 
-HTTPS es obligatorio. Evita registrarlo, colocarlo en URLs o exponerlo a scripts innecesarios. Para riesgos mayores existen tokens ligados al emisor mediante DPoP o mTLS.
+HTTPS es obligatorio. Evita registrarlo, colocarlo en URLs o exponerlo a scripts innecesarios. Para riesgos mayores existen tokens *sender-constrained*: DPoP o mTLS los ligan a una clave o certificado del cliente, que debe demostrar que lo posee en cada llamada.
 
 -----
 
@@ -225,7 +225,7 @@ OAuth 2.0 permite que una aplicación acceda a una API con permisos delegados si
 
 ### Respuesta ampliada (semi-senior)
 
-Separo authorization server, client y resource server. Para usuarios elijo Authorization Code + PKCE; para máquina a máquina, Client Credentials. El cliente valida el ID token para su sesión y trata el access token como opaco. La API valida que el access token fue emitido por la autoridad esperada, está destinado a su audience, no expiró y contiene permisos suficientes. Considero almacenamiento, revocación, rotación y tokens ligados al emisor según el riesgo.
+Separo authorization server, client y resource server. Para usuarios elijo Authorization Code + PKCE; para máquina a máquina, Client Credentials. El cliente valida el ID token para su sesión y trata el access token como opaco. La API valida que el access token fue emitido por la autoridad esperada, está destinado a su audience, no expiró y contiene permisos suficientes. Considero almacenamiento, revocación, rotación y tokens ligados al cliente (DPoP o mTLS) según el riesgo.
 
 ### Preguntas frecuentes de seguimiento
 

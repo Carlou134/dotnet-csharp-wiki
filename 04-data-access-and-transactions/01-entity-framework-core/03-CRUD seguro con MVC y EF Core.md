@@ -21,10 +21,12 @@ Recibir una entidad completa desde un formulario y llamar `Update` permite que e
 ### 1. Contrato de entrada
 ```csharp
 public sealed record CreateContactRequest(
-    [property: Required, StringLength(120)] string Name,
-    [property: Required, EmailAddress] string Email);
+    [Required, StringLength(120)] string Name,
+    [Required, EmailAddress] string Email);
 ```
 El contrato contiene solo campos permitidos. Los atributos ayudan al model binding, pero el dominio debe conservar invariantes propias.
+
+En un record posicional, los atributos van **en el parámetro**, sin `property:`. MVC enlaza el record por su constructor y, si encuentra metadatos de validación en la propiedad, lanza `InvalidOperationException` ("metadata must be associated with the constructor parameter").
 
 ### 2. GET para leer, POST para cambiar
 GET muestra el formulario. POST valida y persiste. Las eliminaciones usan POST o un verbo de API apropiado; nunca GET.
@@ -94,8 +96,8 @@ public sealed class ContactsController(AppDbContext db) : Controller
 }
 
 public sealed record CreateContactRequest(
-    [property: Required, StringLength(120)] string Name,
-    [property: Required, EmailAddress] string Email);
+    [Required, StringLength(120)] string Name,
+    [Required, EmailAddress] string Email);
 
 public sealed record ContactRow(int Id, string Name, string Email);
 ```
@@ -161,8 +163,8 @@ Evito overposting cargando la entidad y aplicando cambios explícitos. Protejo f
 
 ```csharp
 public sealed record EditContactRequest(
-    [property: Required, StringLength(120)] string Name,
-    [property: Required, EmailAddress] string Email);
+    [Required, StringLength(120)] string Name,
+    [Required, EmailAddress] string Email);
 ```
 
 Recibe el ID desde la ruta, carga la entidad y modifica solo `Name` y `Email`.
