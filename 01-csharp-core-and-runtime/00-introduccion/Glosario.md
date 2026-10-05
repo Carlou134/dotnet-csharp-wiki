@@ -62,6 +62,8 @@ Las palabras que aparecen en las lecciones de esta carpeta, explicadas de forma 
 
 **LTS (Long Term Support).** Versión de .NET con 3 años de soporte. Las versiones pares (8, 10) son LTS.
 
+**Metadatos.** Descripción de tipos, métodos, propiedades y referencias que viaja dentro del ensamblado. Permiten la reflexión y también la descompilación. ([CLR y compilación](06-CLR%20compilacion%20y%20sistema%20de%20tipos.md))
+
 **Método.** Bloque de código con nombre que realiza una tarea. `WriteLine` es un método de la clase `Console`.
 
 **MSBuild.** Motor que evalúa el `.csproj` y ejecuta los objetivos de restore, compilación y publicación. ([SDK, CLI, proyectos y NuGet](07-SDK%20CLI%20proyectos%20y%20NuGet.md))
