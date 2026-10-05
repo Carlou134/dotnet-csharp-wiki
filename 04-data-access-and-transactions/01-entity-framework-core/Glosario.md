@@ -4,6 +4,8 @@
 
 **Code First:** flujo donde el modelo de código y sus migraciones conducen la evolución del esquema. ([Migraciones](02-Migraciones%20y%20consultas.md))
 
+**Concurrencia optimista:** estrategia que no bloquea al leer y detecta al guardar si otro proceso cambió la fila; EF Core lanza `DbUpdateConcurrencyException`. ([CRUD seguro](03-CRUD%20seguro%20con%20MVC%20y%20EF%20Core.md))
+
 **DbContext:** sesión de trabajo de EF Core que rastrea entidades y coordina consultas y cambios. ([DbContext](01-DbContext%20entidades%20y%20configuracion.md))
 
 **DbSet:** puerta de entrada tipada para consultar y modificar entidades de un tipo. ([DbContext](01-DbContext%20entidades%20y%20configuracion.md))

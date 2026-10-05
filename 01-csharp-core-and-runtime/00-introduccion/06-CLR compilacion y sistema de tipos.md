@@ -8,7 +8,7 @@ Roslyn traduce C# a CIL y metadatos; el CLR carga ese ensamblado, verifica tipos
 ## Antes de empezar
 Conviene que ya sepas: [Plataforma .NET y su evolución](05-Plataforma%20NET%20y%20evolucion.md).
 
-Palabras nuevas: **CIL:** lenguaje intermedio común; **CTS:** reglas comunes de tipos; **CLS:** subconjunto para interoperabilidad entre lenguajes; **código administrado:** código ejecutado bajo servicios del CLR.
+Palabras nuevas (también están en el [Glosario](Glosario.md)): **CIL:** lenguaje intermedio común; **CTS:** reglas comunes de tipos; **CLS:** subconjunto para interoperabilidad entre lenguajes; **código administrado:** código ejecutado bajo servicios del CLR.
 
 -----
 

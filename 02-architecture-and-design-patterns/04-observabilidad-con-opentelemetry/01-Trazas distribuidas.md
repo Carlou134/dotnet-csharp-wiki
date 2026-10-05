@@ -152,7 +152,7 @@ Respuesta JSON:
 {"orderId":42,"status":"processed"}
 ```
 
-El exportador escribe un span servidor `POST /orders/{id}` y su hijo `orders.process`. Los valores de `TraceId`, `SpanId`, hora y duración cambian en cada ejecución; no se inventan aquí.
+El exportador escribe un span servidor `POST /orders/{id:int}` (el nombre usa la plantilla de ruta tal como se declaró, con su restricción) y su hijo `orders.process`. Los valores de `TraceId`, `SpanId`, hora y duración cambian en cada ejecución; no se inventan aquí.
 
 -----
 

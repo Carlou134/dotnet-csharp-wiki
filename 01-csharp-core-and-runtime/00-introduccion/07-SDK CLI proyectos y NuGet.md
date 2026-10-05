@@ -8,7 +8,7 @@ El SDK y la CLI convierten una descripción de proyecto en artefactos reproducib
 ## Antes de empezar
 Conviene que ya sepas: [CLR, compilación y sistema de tipos](06-CLR%20compilacion%20y%20sistema%20de%20tipos.md).
 
-Palabras nuevas: **MSBuild:** motor de compilación; **restore:** resolución de dependencias; **PackageReference:** dependencia declarada en el proyecto; **activo transitorio:** archivo intermedio de compilación.
+Palabras nuevas (también están en el [Glosario](Glosario.md)): **MSBuild:** motor de compilación; **restore:** resolución de dependencias; **PackageReference:** dependencia declarada en el proyecto; **activos de restore (*assets*):** grafo de dependencias resuelto que se guarda en `obj/`.
 
 -----
 
@@ -102,7 +102,7 @@ La salida adicional de compilación depende del SDK y no se fija como parte del 
 ## Errores comunes
 **1. Confundir `run` con `publish`.** Qué pasa: se despliega desde fuentes o cachés locales. Por qué: `run` es un flujo de desarrollo. Arreglo: genera y despliega la salida de `publish`.
 
-**2. Versionar `bin` y `obj`.** Qué pasa: aparecen conflictos y archivos de otra máquina. Por qué: son derivados. Arreglo: ignóralos y regénéralos.
+**2. Versionar `bin` y `obj`.** Qué pasa: aparecen conflictos y archivos de otra máquina. Por qué: son derivados. Arreglo: ignóralos y regenéralos.
 
 **3. Creer que `global.json` cambia el TFM.** Qué pasa: el proyecto sigue apuntando a la misma plataforma. Por qué: selecciona SDK, no destino. Arreglo: cambia `TargetFramework` solo cuando corresponda.
 

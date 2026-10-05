@@ -63,8 +63,10 @@ Salida con un proyecto `net10.0` ejecutado sobre .NET 10:
 
 ```text
 TFM: .NETCoreApp,Version=v10.0
-Runtime: .NET 10.0.0
+Runtime: .NET 10.0.x
 ```
+
+El último número depende del parche instalado: con el runtime 10.0.5 verás `.NET 10.0.5`.
 
 El nombre interno del TFM conserva `.NETCoreApp` por compatibilidad; eso no cambia el nombre comercial actual: .NET.
 

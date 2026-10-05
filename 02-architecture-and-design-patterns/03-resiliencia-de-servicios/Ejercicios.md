@@ -285,7 +285,7 @@ Stock: 8
 
 **Misión:** simula diez llamadas, abre el circuito con una tasa de fallos configurable y registra las transiciones abierto, medio abierto y cerrado.
 
-**Pista:** usa `OnOpened`, `OnHalfOpened` y `OnClosed`; emplea una `TimeProvider` controlable en pruebas para no depender de esperas reales.
+**Pista:** usa `OnOpened`, `OnHalfOpened` y `OnClosed`; emplea un `TimeProvider` controlable en pruebas para no depender de esperas reales.
 
 <details>
 <summary>Solución</summary>

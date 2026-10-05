@@ -223,7 +223,7 @@ Por qué: un binario Native AOT es específico de sistema operativo y arquitectu
 
 Arreglo: publica con el RID correspondiente, por ejemplo `linux-x64` o `linux-arm64`.
 
-**4. Buscar una imagen final `runtime-deps:*‑aot`.**
+**4. Buscar una imagen final `runtime-deps:*-aot`.**
 
 Qué pasa: Docker no encuentra la etiqueta.
 

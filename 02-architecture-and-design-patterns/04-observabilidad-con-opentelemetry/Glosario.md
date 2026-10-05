@@ -24,6 +24,8 @@ Términos de este módulo, en orden alfabético. Entre paréntesis, la lección 
 
 **Observabilidad:** capacidad de comprender el estado interno de un sistema a partir de sus señales externas. ([Logs y correlación](03-Logs%20estructurados%20y%20correlacion.md))
 
+**Observable gauge:** instrumento que lee el valor actual mediante un callback en cada ciclo de recolección, como la profundidad de una cola. ([Métricas](02-Metricas%20con%20Meter.md))
+
 **OpenTelemetry (OTel):** estándar y conjunto de APIs, SDKs y herramientas para generar, recopilar y exportar telemetría. ([Trazas](01-Trazas%20distribuidas.md))
 
 **OTLP:** protocolo neutral de OpenTelemetry para transportar trazas, métricas y logs. ([Logs y correlación](03-Logs%20estructurados%20y%20correlacion.md))

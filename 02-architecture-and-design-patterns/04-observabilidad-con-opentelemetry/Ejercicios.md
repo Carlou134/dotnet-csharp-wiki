@@ -106,8 +106,10 @@ public sealed class OrderMetrics : IDisposable
 Petición y respuesta:
 
 ```text
-POST /orders → 200 created
+POST /orders → 200 "created"
 ```
+
+`Results.Ok("created")` serializa el string como JSON, por eso el cuerpo lleva comillas.
 
 En el siguiente intervalo de exportación aparecen `orders.created` y `orders.duration`.
 
@@ -142,7 +144,7 @@ app.Run();
 Petición y salida relevante:
 
 ```text
-POST /orders/42 → 200 accepted
+POST /orders/42 → 200 "accepted"
 Orden 42 aceptada
 ```
 
