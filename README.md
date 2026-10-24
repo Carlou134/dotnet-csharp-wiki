@@ -72,6 +72,15 @@ Planificado: caché (`IMemoryCache`, `HybridCache`, Redis).
 
 Planificado: pruebas de contrato y end-to-end.
 
+### 6. Legacy y Migración ([`/06-legacy-y-migracion`](06-legacy-y-migracion/README.md))
+
+| Módulo | Temas |
+| --- | --- |
+| [01. Tecnologías heredadas](06-legacy-y-migracion/01-tecnologias-heredadas/README.md) | .NET Framework frente a .NET moderno, ASP.NET Web Forms, Windows Forms y DevExpress, WCF y CoreWCF, VB.NET para desarrolladores de C# |
+| [02. IIS y migración](06-legacy-y-migracion/02-iis-y-migracion/README.md) | Despliegue en IIS (in-process, out-of-process, errores 500.3x) y estrategias de migración con strangler fig y YARP |
+
+Planificado: WPF y MVVM, EF6 a EF Core, servicios de Windows frente a *worker services*.
+
 -----
 
 ## 📖 Formato de las lecciones

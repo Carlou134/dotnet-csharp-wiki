@@ -24,6 +24,7 @@ README.md                              índice general (tabla por bloque; actual
 03-aspnet-core-apis/                   diseño de APIs, minimal APIs, seguridad...
 04-data-access-and-transactions/       EF Core, ADO.NET, Dapper, transacciones
 05-testing-y-calidad/                  pruebas unitarias, xUnit, Moq, cobertura
+06-legacy-y-migracion/                 .NET Framework, Web Forms, WinForms, WCF, VB.NET, IIS, migración
 ```
 
 Cada módulo es una carpeta `NN-nombre-en-kebab-case/` con:
@@ -149,7 +150,7 @@ Principios:
 Cuando el usuario pegue una guía de sesión ("Continúa con este"):
 
 1. **Revisa la guía con ojo crítico.** Enumera los errores técnicos y conceptuales con evidencia: código que no compila (con el código CSxxxx), excepciones en tiempo de ejecución, APIs deprecadas, afirmaciones exageradas ("desacoplamiento total", "mejora el rendimiento"), malas prácticas de seguridad. Explícalos al usuario al entregar el trabajo.
-2. **Decide la ubicación.** Lenguaje → `01-...`; diseño/arquitectura → `02-...`; ASP.NET Core → `03-...`; datos → `04-...`; pruebas → `05-...`. Si encaja en un módulo existente, amplíalo; si no, crea `NN-modulo-nuevo/`. Solo pregunta si hay una ambigüedad real.
+2. **Decide la ubicación.** Lenguaje → `01-...`; diseño/arquitectura → `02-...`; ASP.NET Core → `03-...`; datos → `04-...`; pruebas → `05-...`; tecnologías heredadas y migración → `06-...`. Si encaja en un módulo existente, amplíalo; si no, crea `NN-modulo-nuevo/`. Solo pregunta si hay una ambigüedad real.
 3. **Escribe las lecciones** con el formato de 13 secciones. Completa lo que la guía no cubre pero hace falta para entender el tema (por ejemplo, la configuración necesaria para que un ejemplo funcione).
 4. **Crea `Ejercicios.md`** con todos los ejercicios de la guía, **corregidos**:
    * Encabezado + una línea de requisitos previos.
@@ -201,6 +202,7 @@ Cuando el usuario pegue una guía de sesión ("Continúa con este"):
 * Integración: no usar EF Core InMemory para probar datos (sin índices, SQL ni transacciones); Testcontainers con el motor real. La API lee la cadena de conexión dentro del lambda de `AddDbContext` y la prueba la sobrescribe con `UseSetting` (quitar y re-registrar el `DbContext` suma dos proveedores desde EF Core 9). Reemplazos en `ConfigureTestServices`, no `ConfigureServices`. Una fábrica que es `IAsyncLifetime` (xUnit v2) implementa `DisposeAsync` de forma explícita. Respawn antes de cada prueba.
 * Clean: la interfaz del puerto la define la aplicación; dominio sin paquetes ni atributos de EF Core (mapeo con Fluent API en Infraestructura, tipos `internal`); casos de uso devuelven DTOs; relación padre-hijos con FK sombra `.IsRequired()` para que se borren los huérfanos. No vender Clean para CRUD: mencionar capas simples o Vertical Slice.
 * Concurrencia: "el cliente gana" con `OriginalValues.SetValues` vuelve a perder el cambio ajeno; para contadores, `ExecuteUpdate` con la condición en el `WHERE`. En APIs, la versión viaja con ETag/If-Match y se fija como `OriginalValue`. Índices: condiciones sargables, compuestos con igualdad primero. N+1 se detecta por cantidad, no por duración. `DbContext.GetService<T>()` resuelve del contenedor interno de EF Core, no del de la app. Paginar siempre con orden total; cursor para feeds.
+* Legacy: ejemplos de .NET Framework (Web Forms) se marcan como tales (net48, C# 7.3, Windows + Visual Studio); el resto en .NET 10. Web Forms no existe en .NET moderno; WinForms sí (solo Windows); WCF servidor vía CoreWCF; VB.NET soportado sin funciones nuevas y sin Razor. Desplegar en IIS no es legacy. Upgrade Assistant está siendo reemplazado por la modernización con GitHub Copilot.
 
 -----
 
