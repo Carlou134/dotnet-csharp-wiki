@@ -10,13 +10,13 @@
 
 Conviene que ya sepas:
 
+* Qué resuelve un ORM y qué hace EF Core por debajo: [ADO.NET, ORMs y EF Core](01-ADO%20NET%20ORMs%20y%20EF%20Core.md).
 * Inyección de dependencias y lifetimes: [Host, configuración y pipeline HTTP](../../03-aspnet-core-apis/00-fundamentos-de-aspnet-core/01-Host%20configuracion%20y%20pipeline%20HTTP.md).
 * LINQ: [Introducción a LINQ](../../01-csharp-core-and-runtime/07-linq/01-Introduccion%20a%20LINQ.md).
 * `async`/`await` y `CancellationToken`: [Asincronía](../../01-csharp-core-and-runtime/10-asincronia-y-archivos/README.md).
 
 Palabras nuevas (también están en el [Glosario](Glosario.md)):
 
-* **ORM:** biblioteca que traduce entre objetos y tablas relacionales.
 * **Proveedor:** paquete que adapta EF Core a un motor concreto (SQLite, SQL Server, PostgreSQL).
 * **DbSet:** punto de entrada tipado para consultar y modificar entidades de un tipo.
 * **Change tracker:** componente del `DbContext` que recuerda el estado de cada entidad cargada.
@@ -401,4 +401,4 @@ Cada iteración crea un contexto nuevo y lo descarta con `await using`. El chang
 
 ## Siguiente lección
 
-[Migraciones y consultas](02-Migraciones%20y%20consultas.md)
+[Modelado con convenciones, atributos y Fluent API](03-Modelado%20con%20convenciones%20atributos%20y%20Fluent%20API.md)

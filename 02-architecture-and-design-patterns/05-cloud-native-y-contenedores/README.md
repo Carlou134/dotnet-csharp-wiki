@@ -54,4 +54,4 @@ Todas las lecciones siguen las 13 secciones de la wiki. Los Dockerfiles usan im�
 
 ## Después de esta carpeta
 
-El siguiente paso es diseñar entrega y operación: registry con análisis de vulnerabilidades y firmas, CI/CD, despliegues progresivos, configuración y secretos administrados, health checks y un orquestador solo cuando la complejidad lo justifique.
+El siguiente paso es diseñar entrega y operación: registry con análisis de vulnerabilidades y firmas, CI/CD, despliegues progresivos, configuración y secretos administrados, health checks y un orquestador solo cuando la complejidad lo justifique. En el diseño de la aplicación, continúa con [CQRS y mediator](../06-cqrs-y-mediator/README.md).

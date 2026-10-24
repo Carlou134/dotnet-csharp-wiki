@@ -7,7 +7,8 @@ Este bloque estudia persistencia con criterio: modelado, consultas, cambios de e
 ## Módulos
 | Módulo | Contenido |
 | --- | --- |
-| [01. Entity Framework Core](01-entity-framework-core/README.md) | `DbContext`, configuración, migraciones y consultas |
+| [01. Entity Framework Core](01-entity-framework-core/README.md) | ADO.NET y ORMs, `DbContext`, modelado, migraciones, relaciones, carga de datos y CRUD |
+| [02. ADO.NET y Dapper](02-ado-net-y-dapper/README.md) | ADO.NET a fondo, Dapper, convivencia con EF Core y transacciones |
 
 -----
 
@@ -21,4 +22,4 @@ dominio -> caso de uso -> persistencia -> base de datos
 -----
 
 ## Próximos temas
-Relaciones, transacciones ACID, concurrencia optimista, rendimiento SQL, índices y planes de ejecución.
+Concurrencia optimista en profundidad, rendimiento SQL, índices y planes de ejecución.

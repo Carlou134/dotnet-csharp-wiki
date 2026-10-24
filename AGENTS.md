@@ -180,7 +180,18 @@ Cuando el usuario pegue una guía de sesión ("Continúa con este"):
 * Comprobar que un header existe no es autenticación: `AddAuthentication` + `RequireAuthorization`.
 * Castear un `Delegate` guardado como `Action<T>` a `Func<T, Task>` → `InvalidCastException`. Una lambda `async` pasada a `Action<T>` es `async void`.
 * ProblemDetails sigue el RFC 9457 (reemplaza al 7807).
-* MediatR y MassTransit 9 tienen licencia comercial desde 2025: menciónalo si los recomiendas.
+* MediatR y MassTransit 9 tienen licencia comercial desde 2025: menciónalo si los recomiendas. AutoMapper también, desde la v15.
+* `MediatR.Extensions.Microsoft.DependencyInjection` y `AutoMapper.Extensions.Microsoft.DependencyInjection` están obsoletos (integrados en MediatR 12 y AutoMapper 13).
+* EF Core no pluraliza: la tabla toma el nombre del `DbSet` o, si no hay, de la clase. Las migraciones crean el esquema solas (`EnsureSchema`).
+* `Add`, no `AddAsync` (solo para HiLo). `Single` lanza si no hay filas: un `if (x != null)` después es código muerto.
+* `FromSqlRaw($"...{valor}")` es inyección SQL (advertencia EF1002); usa `FromSql`. Un ORM no protege solo: protegen los parámetros.
+* Lazy loading está apagado por defecto en EF Core (requiere `Proxies`); produce N+1. `ICollection<T>` no es obligatorio.
+* Validators de FluentValidation con `Task.WhenAll` sobre el mismo `DbContext` scoped → `InvalidOperationException`. `MustAsync` usa `(valor, ct)` y `!await`.
+* `Publish` de MediatR espera a los handlers y por defecto propaga la primera excepción; no es "dispara y olvida".
+* `IExceptionFilter` solo cubre MVC: para toda la app, `IExceptionHandler` + `AddProblemDetails()`.
+* ADO.NET: `null` en un parámetro no es `NULL` (usa `DBNull.Value`); SQLite devuelve enteros como `Int64`.
+* Dapper: `IN @Ids` sin paréntesis; records posicionales exigen tipos exactos (en SQLite, `long`); alias mal escritos dejan propiedades vacías sin error. Con conexión con transacción pendiente, cada comando necesita `transaction: tx`.
+* El change tracker no ve cambios hechos con Dapper/SQL: una consulta con tracking devuelve la instancia ya rastreada sin refrescarla.
 
 -----
 

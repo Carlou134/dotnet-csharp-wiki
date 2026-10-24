@@ -36,6 +36,7 @@ Versión de referencia: **.NET 10 / C# 14**.
 | [03. Resiliencia de servicios con Polly](02-architecture-and-design-patterns/03-resiliencia-de-servicios/README.md) | Retry, backoff, jitter, circuit breaker, timeouts y pipelines HTTP con Polly 8 · [ejercicios](02-architecture-and-design-patterns/03-resiliencia-de-servicios/Ejercicios.md) |
 | [04. Observabilidad con OpenTelemetry](02-architecture-and-design-patterns/04-observabilidad-con-opentelemetry/README.md) | Trazas distribuidas, métricas, logs estructurados, correlación y exportación OTLP · [ejercicios](02-architecture-and-design-patterns/04-observabilidad-con-opentelemetry/Ejercicios.md) |
 | [05. Cloud native y contenedores](02-architecture-and-design-patterns/05-cloud-native-y-contenedores/README.md) | Docker, builds multi-stage, imágenes seguras, Native AOT y diseño cloud native · [ejercicios](02-architecture-and-design-patterns/05-cloud-native-y-contenedores/Ejercicios.md) |
+| [06. CQRS y mediator](02-architecture-and-design-patterns/06-cqrs-y-mediator/README.md) | DTOs y mapeo, commands y queries con MediatR, notificaciones en proceso y validación con pipeline behaviors |
 
 Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*), Clean y Hexagonal Architecture.
 
@@ -54,9 +55,10 @@ Planificado: validación (FluentValidation y validación integrada de .NET 10), 
 
 | Módulo | Temas |
 | --- | --- |
-| [01. Entity Framework Core](04-data-access-and-transactions/01-entity-framework-core/README.md) | `DbContext`, proveedores, migraciones, consultas asíncronas y CRUD seguro con MVC |
+| [01. Entity Framework Core](04-data-access-and-transactions/01-entity-framework-core/README.md) | ADO.NET y ORMs, `DbContext`, modelado con Fluent API, migraciones, relaciones y carga de datos, CRUD en APIs y con MVC |
+| [02. ADO.NET y Dapper](04-data-access-and-transactions/02-ado-net-y-dapper/README.md) | Pool de conexiones, readers, Dapper (multi-mapping, `QueryMultiple`), convivencia con EF Core y transacciones compartidas |
 
-Planificado: relaciones, transacciones ACID, concurrencia optimista, rendimiento SQL, N+1, índices y planes de ejecución.
+Planificado: concurrencia optimista en profundidad, rendimiento SQL, índices y planes de ejecución.
 
 -----
 

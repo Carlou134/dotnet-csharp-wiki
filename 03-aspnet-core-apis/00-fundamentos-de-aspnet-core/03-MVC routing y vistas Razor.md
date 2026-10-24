@@ -171,7 +171,7 @@ En formularios, `<form asp-action="Crear" method="post">` agrega automáticament
 
 ### 8. Formularios y verbos
 
-Las acciones que cambian estado usan POST con validación antiforgery. **Nunca conviertas una eliminación en un enlace GET**: crawlers, el *prefetch* del navegador o un enlace en un correo podrían dispararla. El flujo completo de formularios con persistencia está en [CRUD seguro con MVC y EF Core](../../04-data-access-and-transactions/01-entity-framework-core/03-CRUD%20seguro%20con%20MVC%20y%20EF%20Core.md).
+Las acciones que cambian estado usan POST con validación antiforgery. **Nunca conviertas una eliminación en un enlace GET**: crawlers, el *prefetch* del navegador o un enlace en un correo podrían dispararla. El flujo completo de formularios con persistencia está en [CRUD seguro con MVC y EF Core](../../04-data-access-and-transactions/01-entity-framework-core/07-CRUD%20seguro%20con%20MVC%20y%20EF%20Core.md).
 
 -----
 

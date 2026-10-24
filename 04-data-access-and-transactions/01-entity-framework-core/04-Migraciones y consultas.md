@@ -10,7 +10,7 @@ Una migración es código versionado que lleva el esquema de la base de un estad
 
 Conviene que ya sepas:
 
-* `DbContext`, entidades, configuración y change tracker: [DbContext, entidades y configuración](01-DbContext%20entidades%20y%20configuracion.md).
+* `DbContext`, entidades, configuración y change tracker: [DbContext, entidades y configuración](02-DbContext%20entidades%20y%20configuracion.md).
 * Minimal APIs: [Endpoints y grupos de rutas](../../03-aspnet-core-apis/02-minimal-apis/01-Endpoints%20y%20grupos%20de%20rutas.md).
 
 Palabras nuevas (también están en el [Glosario](Glosario.md)):
@@ -157,7 +157,7 @@ Console.WriteLine(query.ToQueryString());
 
 ## Ejemplo completo
 
-Proyecto `dotnet new web`. Usa las mismas clases `Contact` y `AppDbContext` de la [lección anterior](01-DbContext%20entidades%20y%20configuracion.md) (con su `OnModelCreating`).
+Proyecto `dotnet new web`. Usa las mismas clases `Contact` y `AppDbContext` de la [lección 2](02-DbContext%20entidades%20y%20configuracion.md) (con su `OnModelCreating`).
 
 ```text
 dotnet package add Microsoft.EntityFrameworkCore.Sqlite --version 10.0.0
@@ -212,7 +212,7 @@ app.Run();
 public sealed record CreateContact(string Name, string Email);
 public sealed record ContactRow(int Id, string Name, string Email);
 
-// Contact y AppDbContext: copia las clases de la lección anterior.
+// Contact y AppDbContext: copia las clases de la lección 2.
 ```
 
 Genera y aplica la primera migración:
@@ -254,9 +254,9 @@ GET  /contacts                                              → 200 [{"id":1,"na
 
 Qué observar:
 
-* La configuración de la lección anterior (`HasMaxLength`, índice único) aparece en la migración: el esquema expresa las reglas.
+* La configuración de la lección 2 (`HasMaxLength`, índice único) aparece en la migración: el esquema expresa las reglas.
 * `database update` creó `contacts.db` y la tabla `__EFMigrationsHistory` con una fila: `InitialCreate`.
-* Un segundo `POST` con el mismo email lanza `DbUpdateException` por el índice único. La base protege la regla; la [siguiente lección](03-CRUD%20seguro%20con%20MVC%20y%20EF%20Core.md) muestra cómo responder bien en ese caso.
+* Un segundo `POST` con el mismo email lanza `DbUpdateException` por el índice único. La base protege la regla; la [lección 7](07-CRUD%20seguro%20con%20MVC%20y%20EF%20Core.md) muestra cómo responder bien en ese caso.
 
 -----
 
@@ -402,4 +402,4 @@ ContactRow[] corporativos = await db.Contacts
 
 ## Siguiente lección
 
-[CRUD seguro con MVC y EF Core](03-CRUD%20seguro%20con%20MVC%20y%20EF%20Core.md)
+[Relaciones y carga de datos](05-Relaciones%20y%20carga%20de%20datos.md)

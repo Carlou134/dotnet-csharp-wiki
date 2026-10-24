@@ -11,7 +11,8 @@ Un CRUD correcto recibe modelos de formulario (no entidades), valida en el servi
 Conviene que ya sepas:
 
 * Controladores, vistas, Tag Helpers y `ModelState`: [MVC, routing y vistas Razor](../../03-aspnet-core-apis/00-fundamentos-de-aspnet-core/03-MVC%20routing%20y%20vistas%20Razor.md).
-* Change tracker y consultas: [DbContext, entidades y configuración](01-DbContext%20entidades%20y%20configuracion.md) y [Migraciones y consultas](02-Migraciones%20y%20consultas.md).
+* Change tracker y consultas: [DbContext, entidades y configuración](02-DbContext%20entidades%20y%20configuracion.md) y [Migraciones y consultas](04-Migraciones%20y%20consultas.md).
+* DTOs de entrada, `Find` y `ExecuteDeleteAsync`: [CRUD en APIs con EF Core](06-CRUD%20en%20APIs%20con%20EF%20Core.md).
 
 Palabras nuevas (también están en el [Glosario](Glosario.md)):
 
@@ -134,7 +135,7 @@ Para mostrar "Contacto creado" después de redirigir, usa `TempData`: sobrevive 
 
 ### 7. Errores esperables: duplicados y concurrencia
 
-**Duplicados.** El índice único de `Email` (lección 1) protege la regla en la base. Comprueba antes con `AnyAsync` para dar un mensaje claro; atrapa además `DbUpdateException`, porque entre la comprobación y el `INSERT` otro usuario pudo guardar el mismo email.
+**Duplicados.** El índice único de `Email` (lección 2) protege la regla en la base. Comprueba antes con `AnyAsync` para dar un mensaje claro; atrapa además `DbUpdateException`, porque entre la comprobación y el `INSERT` otro usuario pudo guardar el mismo email.
 
 **Concurrencia.** Dos personas abren el mismo contacto y guardan. Sin control, gana el último y el primero pierde su cambio sin enterarse. Un *token de concurrencia* lo detecta:
 
@@ -157,7 +158,7 @@ await db.Contacts.Where(c => c.Id == id).ExecuteDeleteAsync(cancellationToken);
 
 ## Ejemplo completo
 
-Proyecto `dotnet new web` con las clases `Contact` y `AppDbContext` de la [lección 1](01-DbContext%20entidades%20y%20configuracion.md) (con el índice único en `Email`), la cadena de conexión y la migración de la [lección 2](02-Migraciones%20y%20consultas.md).
+Proyecto `dotnet new web` con las clases `Contact` y `AppDbContext` de la [lección 2](02-DbContext%20entidades%20y%20configuracion.md) (con el índice único en `Email`), la cadena de conexión y la migración de la [lección 4](04-Migraciones%20y%20consultas.md).
 
 `Program.cs`:
 
@@ -175,7 +176,7 @@ var app = builder.Build();
 app.MapControllerRoute("default", "{controller=Contacts}/{action=Index}/{id?}");
 app.Run();
 
-// Contact y AppDbContext: de la lección 1.
+// Contact y AppDbContext: de la lección 2.
 ```
 
 `Controllers/ContactsController.cs`:
@@ -510,4 +511,4 @@ Asignar `OriginalValue` hace que el `UPDATE` incluya `WHERE Version = <la que vi
 
 ## Siguiente lección
 
-Terminaste el módulo. Vuelve al [índice](README.md). Los siguientes temas del bloque son relaciones, transacciones y concurrencia en profundidad.
+Terminaste el módulo. Vuelve al [índice](README.md). Continúa con [ADO.NET y Dapper](../02-ado-net-y-dapper/README.md).
