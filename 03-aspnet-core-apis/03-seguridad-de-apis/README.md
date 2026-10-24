@@ -23,6 +23,7 @@ Si aparece una palabra que no conoces, búscala en el [Glosario](Glosario.md).
 | [1. OAuth 2.0, OpenID Connect y tokens](01-OAuth%202%20OpenID%20Connect%20y%20tokens.md) | Actores, autorización frente a autenticación, flujos, access token frente a ID token y JWT | HTTP, APIs REST |
 | [2. Autenticación JWT bearer en ASP.NET Core](02-Autenticacion%20JWT%20bearer%20en%20ASP.NET%20Core.md) | Validación de firma, issuer, audience y expiración; `AddJwtBearer`; `401`; pruebas con `dotnet user-jwts` | OAuth/OIDC, minimal APIs |
 | [3. Autorización con claims y políticas](03-Autorizacion%20con%20claims%20y%20politicas.md) | Scopes, roles, policies, `401` frente a `403`, recursos y elección de proveedor | JWT bearer |
+| [4. Emisión de JWT y hash de contraseñas](04-Emision%20de%20JWT%20y%20hash%20de%20contrasenas.md) | Hash con BCrypt, login sin enumeración, clave de firma fuera del repositorio, claims `sub`/`role` y mapeo de claims | JWT bearer, claims |
 
 Para practicar: [Ejercicios de seguridad](Ejercicios.md), con los cinco ejercicios y los tres retos de la Sesión 14 corregidos.
 
@@ -42,6 +43,8 @@ API     ── evalúa scope/claim/policy + recurso ─────> autorizaci�
 
 Token ausente o inválido → 401
 Token válido sin permiso → 403
+
+Login propio  → BCrypt.Verify + misma respuesta si falla → JWT firmado (sub, name, role, exp corta)
 ID token enviado a la API → token equivocado
 ```
 

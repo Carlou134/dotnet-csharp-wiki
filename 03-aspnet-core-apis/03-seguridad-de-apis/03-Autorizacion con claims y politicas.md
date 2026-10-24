@@ -300,4 +300,4 @@ No. 403 comunica que la identidad fue aceptada pero no cumple la policy. Convert
 
 ## Siguiente lección
 
-Terminaste el módulo. Continúa con [Ejercicios de seguridad](Ejercicios.md) y vuelve al [índice del módulo](README.md).
+[Emisión de JWT y hash de contraseñas](04-Emision%20de%20JWT%20y%20hash%20de%20contrasenas.md)

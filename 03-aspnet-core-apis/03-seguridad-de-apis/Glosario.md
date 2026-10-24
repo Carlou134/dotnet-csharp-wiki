@@ -18,7 +18,15 @@ Términos de este módulo, en orden alfabético. Entre paréntesis, la lección 
 
 **Claim:** afirmación sobre el sujeto o cliente, como `sub`, `scope` o `role`. ([Claims y políticas](03-Autorizacion%20con%20claims%20y%20politicas.md))
 
+**Clave simétrica:** secreto único que firma y verifica un token (HMAC, `HS256`); quien puede verificar también puede emitir. ([Emisión de JWT](04-Emision%20de%20JWT%20y%20hash%20de%20contrasenas.md))
+
 **Client:** aplicación que solicita autorización y usa un access token para llamar a una API. ([OAuth y OIDC](01-OAuth%202%20OpenID%20Connect%20y%20tokens.md))
+
+**Enumeración de usuarios:** técnica para descubrir qué cuentas existen por diferencias en las respuestas o en sus tiempos. ([Emisión de JWT](04-Emision%20de%20JWT%20y%20hash%20de%20contrasenas.md))
+
+**Factor de costo:** parámetro que vuelve deliberadamente lento un hash de contraseñas como BCrypt, para encarecer la fuerza bruta. ([Emisión de JWT](04-Emision%20de%20JWT%20y%20hash%20de%20contrasenas.md))
+
+**Hash de contraseña:** resultado de una función de un solo sentido, lenta y con sal, que permite verificar una contraseña sin guardarla. ([Emisión de JWT](04-Emision%20de%20JWT%20y%20hash%20de%20contrasenas.md))
 
 **ID token:** JWT de OpenID Connect que informa al cliente sobre la autenticación del usuario; no se usa para acceder a una API. ([OAuth y OIDC](01-OAuth%202%20OpenID%20Connect%20y%20tokens.md))
 
@@ -39,5 +47,7 @@ Términos de este módulo, en orden alfabético. Entre paréntesis, la lección 
 **Resource server:** API que recibe y valida access tokens antes de autorizar el acceso. ([JWT bearer](02-Autenticacion%20JWT%20bearer%20en%20ASP.NET%20Core.md))
 
 **Role:** pertenencia a una categoría funcional (`admin`, `support`). No equivale a un permiso concreto, y el nombre del claim depende del proveedor. ([Claims y políticas](03-Autorizacion%20con%20claims%20y%20politicas.md))
+
+**Sal (salt):** valor aleatorio que se combina con cada contraseña antes del hash para que contraseñas iguales den hashes distintos. ([Emisión de JWT](04-Emision%20de%20JWT%20y%20hash%20de%20contrasenas.md))
 
 **Scope:** permiso delegado solicitado y concedido para una API, como `orders.read`. ([Claims y políticas](03-Autorizacion%20con%20claims%20y%20politicas.md))

@@ -47,9 +47,10 @@ Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Bu
 | [00. Fundamentos de ASP.NET Core](03-aspnet-core-apis/00-fundamentos-de-aspnet-core/README.md) | Host, configuración, middleware, modelos de aplicación, MVC, routing y Razor |
 | [01. Diseño de APIs REST](03-aspnet-core-apis/01-diseno-de-apis-rest/README.md) | Principios REST, códigos de estado, ProblemDetails, versionamiento, HATEOAS · [ejercicios](03-aspnet-core-apis/01-diseno-de-apis-rest/Ejercicios.md) |
 | [02. Minimal APIs](03-aspnet-core-apis/02-minimal-apis/README.md) | Endpoints y grupos de rutas, Typed Results, endpoint filters · [ejercicios](03-aspnet-core-apis/02-minimal-apis/Ejercicios.md) |
-| [03. Seguridad de APIs](03-aspnet-core-apis/03-seguridad-de-apis/README.md) | OAuth 2.0, OpenID Connect, JWT bearer, claims, roles y políticas · [ejercicios](03-aspnet-core-apis/03-seguridad-de-apis/Ejercicios.md) |
+| [03. Seguridad de APIs](03-aspnet-core-apis/03-seguridad-de-apis/README.md) | OAuth 2.0, OpenID Connect, JWT bearer, claims, roles y políticas, emisión de JWT propios y hash de contraseñas · [ejercicios](03-aspnet-core-apis/03-seguridad-de-apis/Ejercicios.md) |
+| [04. Web API: servicios, middleware y documentación](03-aspnet-core-apis/04-web-api-servicios-y-documentacion/README.md) | Controladores y rutas por atributo, inyección de dependencias y ciclos de vida, middleware propio, logging con `ILogger`, OpenAPI |
 
-Planificado: validación (FluentValidation y validación integrada de .NET 10), inyección de dependencias y ciclos de vida, OWASP Top 10, logging estructurado con Serilog, Health Checks.
+Planificado: validación integrada de .NET 10, OWASP Top 10, Health Checks y pruebas de integración con `WebApplicationFactory`.
 
 ### 4. Acceso a Datos & Transacciones ([`/04-data-access-and-transactions`](04-data-access-and-transactions/README.md))
 
@@ -59,6 +60,14 @@ Planificado: validación (FluentValidation y validación integrada de .NET 10), 
 | [02. ADO.NET y Dapper](04-data-access-and-transactions/02-ado-net-y-dapper/README.md) | Pool de conexiones, readers, Dapper (multi-mapping, `QueryMultiple`), convivencia con EF Core y transacciones compartidas |
 
 Planificado: concurrencia optimista en profundidad, rendimiento SQL, índices y planes de ejecución.
+
+### 5. Testing y Calidad ([`/05-testing-y-calidad`](05-testing-y-calidad/README.md))
+
+| Módulo | Temas |
+| --- | --- |
+| [01. Pruebas unitarias](05-testing-y-calidad/01-pruebas-unitarias/README.md) | Pruebas unitarias y TDD, xUnit (`Fact`, `Theory`, aserciones), dobles de prueba con Moq, cobertura con Coverlet |
+
+Planificado: pruebas de integración, Testcontainers y pruebas de contrato.
 
 -----
 

@@ -22,7 +22,8 @@ README.md                              índice general (tabla por bloque; actual
 01-csharp-core-and-runtime/            NN-modulo/ con lecciones del lenguaje
 02-architecture-and-design-patterns/   DDD, EDA, patrones, Clean Architecture...
 03-aspnet-core-apis/                   diseño de APIs, minimal APIs, seguridad...
-04-data-access-and-transactions/       EF Core, transacciones, concurrencia (planificado)
+04-data-access-and-transactions/       EF Core, ADO.NET, Dapper, transacciones
+05-testing-y-calidad/                  pruebas unitarias, xUnit, Moq, cobertura
 ```
 
 Cada módulo es una carpeta `NN-nombre-en-kebab-case/` con:
@@ -148,7 +149,7 @@ Principios:
 Cuando el usuario pegue una guía de sesión ("Continúa con este"):
 
 1. **Revisa la guía con ojo crítico.** Enumera los errores técnicos y conceptuales con evidencia: código que no compila (con el código CSxxxx), excepciones en tiempo de ejecución, APIs deprecadas, afirmaciones exageradas ("desacoplamiento total", "mejora el rendimiento"), malas prácticas de seguridad. Explícalos al usuario al entregar el trabajo.
-2. **Decide la ubicación.** Lenguaje → `01-...`; diseño/arquitectura → `02-...`; ASP.NET Core → `03-...`; datos → `04-...`. Si encaja en un módulo existente, amplíalo; si no, crea `NN-modulo-nuevo/`. Solo pregunta si hay una ambigüedad real.
+2. **Decide la ubicación.** Lenguaje → `01-...`; diseño/arquitectura → `02-...`; ASP.NET Core → `03-...`; datos → `04-...`; pruebas → `05-...`. Si encaja en un módulo existente, amplíalo; si no, crea `NN-modulo-nuevo/`. Solo pregunta si hay una ambigüedad real.
 3. **Escribe las lecciones** con el formato de 13 secciones. Completa lo que la guía no cubre pero hace falta para entender el tema (por ejemplo, la configuración necesaria para que un ejemplo funcione).
 4. **Crea `Ejercicios.md`** con todos los ejercicios de la guía, **corregidos**:
    * Encabezado + una línea de requisitos previos.
@@ -192,6 +193,11 @@ Cuando el usuario pegue una guía de sesión ("Continúa con este"):
 * ADO.NET: `null` en un parámetro no es `NULL` (usa `DBNull.Value`); SQLite devuelve enteros como `Int64`.
 * Dapper: `IN @Ids` sin paréntesis; records posicionales exigen tipos exactos (en SQLite, `long`); alias mal escritos dejan propiedades vacías sin error. Con conexión con transacción pendiente, cada comando necesita `transaction: tx`.
 * El change tracker no ve cambios hechos con Dapper/SQL: una consulta con tracking devuelve la instancia ya rastreada sin refrescarla.
+* DI: el lifetime se elige por el estado del servicio, no "scoped por defecto"; singleton es correcto para estado compartido seguro. Un middleware por convención es instancia única: scoped como parámetro de `InvokeAsync`.
+* Middleware: no escribir cuerpo ni encabezados después de `next` (la respuesta ya empezó); usar cortocircuito u `OnStarting`.
+* .NET 9+ no trae Swashbuckle en las plantillas: `AddOpenApi()` + `MapOpenApi()`. Ocultar OpenAPI no es seguridad.
+* JWT propio: clave fuera del repo, `sub` con el id estable, `MapInboundClaims = false` + `RoleClaimType`. `[Authorize]` no llena `User`; lo llena el middleware.
+* Pruebas: NUnit 4 quitó `Assert.AreEqual` (usa `Assert.That`/`ClassicAssert`); no mockear `ILogger` (usar `NullLogger`/`FakeLogger`) ni `DbContext`; la cobertura no mide asserts.
 
 -----
 
