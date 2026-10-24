@@ -37,8 +37,9 @@ Versión de referencia: **.NET 10 / C# 14**.
 | [04. Observabilidad con OpenTelemetry](02-architecture-and-design-patterns/04-observabilidad-con-opentelemetry/README.md) | Trazas distribuidas, métricas, logs estructurados, correlación y exportación OTLP · [ejercicios](02-architecture-and-design-patterns/04-observabilidad-con-opentelemetry/Ejercicios.md) |
 | [05. Cloud native y contenedores](02-architecture-and-design-patterns/05-cloud-native-y-contenedores/README.md) | Docker, builds multi-stage, imágenes seguras, Native AOT y diseño cloud native · [ejercicios](02-architecture-and-design-patterns/05-cloud-native-y-contenedores/Ejercicios.md) |
 | [06. CQRS y mediator](02-architecture-and-design-patterns/06-cqrs-y-mediator/README.md) | DTOs y mapeo, commands y queries con MediatR, notificaciones en proceso y validación con pipeline behaviors |
+| [07. Clean y Hexagonal Architecture](02-architecture-and-design-patterns/07-clean-y-hexagonal/README.md) | Regla de dependencias, puertos y adaptadores, solución en cuatro proyectos, pruebas de arquitectura con NetArchTest y cuándo no usar Clean · [ejercicios](02-architecture-and-design-patterns/07-clean-y-hexagonal/Ejercicios.md) |
 
-Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*), Clean y Hexagonal Architecture.
+Planificado: mensajería con brokers, microservicios y patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Builder*).
 
 ### 3. ASP.NET Core ([`/03-aspnet-core-apis`](03-aspnet-core-apis/))
 

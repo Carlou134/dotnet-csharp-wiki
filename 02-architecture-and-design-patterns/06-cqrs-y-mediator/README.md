@@ -52,4 +52,4 @@ Todas las lecciones siguen las 13 secciones de la wiki. Los ejemplos usan Mediat
 
 ## Después de esta carpeta
 
-Con los casos de uso separados, el paso natural es la arquitectura que los contiene: Clean y Hexagonal Architecture, con el dominio en el centro. Para efectos secundarios confiables, repasa [Entrega confiable e idempotencia](../02-event-driven-architecture/03-Entrega%20confiable%20e%20idempotencia.md).
+Con los casos de uso separados, el paso natural es la arquitectura que los contiene: [Clean y Hexagonal Architecture](../07-clean-y-hexagonal/README.md), con el dominio en el centro. Para efectos secundarios confiables, repasa [Entrega confiable e idempotencia](../02-event-driven-architecture/03-Entrega%20confiable%20e%20idempotencia.md).

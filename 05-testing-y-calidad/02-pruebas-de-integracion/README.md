@@ -57,4 +57,4 @@ Todas las lecciones siguen las 13 secciones de la wiki y usan la misma API de ta
 
 ## Después de esta carpeta
 
-Con pruebas de integración en marcha, el siguiente paso del roadmap es organizar la solución con Clean y Hexagonal Architecture (planificado en el bloque de arquitectura): capas bien separadas hacen que estas pruebas sean todavía más simples. También puedes sumar pruebas de contrato (Pact) cuando la API tiene consumidores de otros equipos.
+Con pruebas de integración en marcha, el siguiente paso del roadmap es organizar la solución con [Clean y Hexagonal Architecture](../../02-architecture-and-design-patterns/07-clean-y-hexagonal/README.md): capas bien separadas hacen que estas pruebas sean todavía más simples. También puedes sumar pruebas de contrato (Pact) cuando la API tiene consumidores de otros equipos.
