@@ -51,4 +51,4 @@ Todas las lecciones siguen las 13 secciones de la wiki y usan la misma solución
 
 ## Después de esta carpeta
 
-El siguiente paso son las pruebas de integración: `WebApplicationFactory` para probar la API completa en memoria, bases reales con Testcontainers y pruebas de contrato. Para que las pruebas sean fáciles de escribir, repasa [Inyección de dependencias](../../03-aspnet-core-apis/04-web-api-servicios-y-documentacion/02-Inyeccion%20de%20dependencias%20y%20ciclos%20de%20vida.md) y [Código limpio](../../01-csharp-core-and-runtime/11-codigo-limpio/README.md).
+El siguiente paso son las [pruebas de integración](../02-pruebas-de-integracion/README.md): la API completa en memoria con `WebApplicationFactory`, bases reales con Testcontainers y aislamiento con Respawn. Para que las pruebas sean fáciles de escribir, repasa [Inyección de dependencias](../../03-aspnet-core-apis/04-web-api-servicios-y-documentacion/02-Inyeccion%20de%20dependencias%20y%20ciclos%20de%20vida.md) y [Código limpio](../../01-csharp-core-and-runtime/11-codigo-limpio/README.md).

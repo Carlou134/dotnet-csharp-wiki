@@ -50,7 +50,7 @@ Planificado: patrones GoF (*Factory*, *Strategy*, *Repository*, *Decorator*, *Bu
 | [03. Seguridad de APIs](03-aspnet-core-apis/03-seguridad-de-apis/README.md) | OAuth 2.0, OpenID Connect, JWT bearer, claims, roles y políticas, emisión de JWT propios y hash de contraseñas · [ejercicios](03-aspnet-core-apis/03-seguridad-de-apis/Ejercicios.md) |
 | [04. Web API: servicios, middleware y documentación](03-aspnet-core-apis/04-web-api-servicios-y-documentacion/README.md) | Controladores y rutas por atributo, inyección de dependencias y ciclos de vida, middleware propio, logging con `ILogger`, OpenAPI |
 
-Planificado: validación integrada de .NET 10, OWASP Top 10, Health Checks y pruebas de integración con `WebApplicationFactory`.
+Planificado: validación integrada de .NET 10, OWASP Top 10 y Health Checks.
 
 ### 4. Acceso a Datos & Transacciones ([`/04-data-access-and-transactions`](04-data-access-and-transactions/README.md))
 
@@ -66,8 +66,9 @@ Planificado: concurrencia optimista en profundidad, rendimiento SQL, índices y 
 | Módulo | Temas |
 | --- | --- |
 | [01. Pruebas unitarias](05-testing-y-calidad/01-pruebas-unitarias/README.md) | Pruebas unitarias y TDD, xUnit (`Fact`, `Theory`, aserciones), dobles de prueba con Moq, cobertura con Coverlet |
+| [02. Pruebas de integración](05-testing-y-calidad/02-pruebas-de-integracion/README.md) | `WebApplicationFactory`, `ConfigureTestServices`, autenticación de prueba, `FakeTimeProvider`, Testcontainers y Respawn · [ejercicios](05-testing-y-calidad/02-pruebas-de-integracion/Ejercicios.md) |
 
-Planificado: pruebas de integración, Testcontainers y pruebas de contrato.
+Planificado: pruebas de contrato y end-to-end.
 
 -----
 

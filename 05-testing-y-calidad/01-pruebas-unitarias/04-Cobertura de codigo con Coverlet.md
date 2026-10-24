@@ -360,4 +360,4 @@ Con `>`, la primera devuelve 10 y falla. Sin recargo, la segunda devuelve 10 y f
 
 ## Siguiente lección
 
-Terminaste el módulo. Vuelve al [índice](README.md).
+Terminaste el módulo. Continúa con [Pruebas de integración](../02-pruebas-de-integracion/README.md) o vuelve al [índice](README.md).

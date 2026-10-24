@@ -198,6 +198,7 @@ Cuando el usuario pegue una guía de sesión ("Continúa con este"):
 * .NET 9+ no trae Swashbuckle en las plantillas: `AddOpenApi()` + `MapOpenApi()`. Ocultar OpenAPI no es seguridad.
 * JWT propio: clave fuera del repo, `sub` con el id estable, `MapInboundClaims = false` + `RoleClaimType`. `[Authorize]` no llena `User`; lo llena el middleware.
 * Pruebas: NUnit 4 quitó `Assert.AreEqual` (usa `Assert.That`/`ClassicAssert`); no mockear `ILogger` (usar `NullLogger`/`FakeLogger`) ni `DbContext`; la cobertura no mide asserts.
+* Integración: no usar EF Core InMemory para probar datos (sin índices, SQL ni transacciones); Testcontainers con el motor real. La API lee la cadena de conexión dentro del lambda de `AddDbContext` y la prueba la sobrescribe con `UseSetting` (quitar y re-registrar el `DbContext` suma dos proveedores desde EF Core 9). Reemplazos en `ConfigureTestServices`, no `ConfigureServices`. Una fábrica que es `IAsyncLifetime` (xUnit v2) implementa `DisposeAsync` de forma explícita. Respawn antes de cada prueba.
 
 -----
 

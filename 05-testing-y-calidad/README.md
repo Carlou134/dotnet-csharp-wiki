@@ -1,6 +1,6 @@
 # Testing y calidad
 
-Este bloque estudia cómo saber que el código hace lo que debe, hoy y después de cada cambio: pruebas unitarias, dobles de prueba y cobertura, con la mirada puesta en pruebas que detectan errores y no en números que se ven bien.
+Este bloque estudia cómo saber que el código hace lo que debe, hoy y después de cada cambio: pruebas unitarias, dobles de prueba, cobertura y pruebas de integración con la API y la base reales, con la mirada puesta en pruebas que detectan errores y no en números que se ven bien.
 
 -----
 
@@ -8,6 +8,7 @@ Este bloque estudia cómo saber que el código hace lo que debe, hoy y después 
 | Módulo | Contenido |
 | --- | --- |
 | [01. Pruebas unitarias](01-pruebas-unitarias/README.md) | TDD, xUnit (`Fact`, `Theory`, aserciones), dobles de prueba con Moq y cobertura con Coverlet |
+| [02. Pruebas de integración](02-pruebas-de-integracion/README.md) | `WebApplicationFactory`, reemplazo de servicios y autenticación de prueba, Testcontainers, Respawn · [ejercicios](02-pruebas-de-integracion/Ejercicios.md) |
 
 -----
 
@@ -22,4 +23,4 @@ calidad de las pruebas → cobertura (qué corrió) + mutación (qué detectan)
 -----
 
 ## Próximos temas
-Pruebas de integración con `WebApplicationFactory`, Testcontainers, pruebas de contrato y pruebas de carga.
+Pruebas de contrato, pruebas de carga y pruebas end-to-end.
