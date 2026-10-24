@@ -59,8 +59,9 @@ Planificado: validación integrada de .NET 10, OWASP Top 10 y Health Checks.
 | --- | --- |
 | [01. Entity Framework Core](04-data-access-and-transactions/01-entity-framework-core/README.md) | ADO.NET y ORMs, `DbContext`, modelado con Fluent API, migraciones, relaciones y carga de datos, CRUD en APIs y con MVC |
 | [02. ADO.NET y Dapper](04-data-access-and-transactions/02-ado-net-y-dapper/README.md) | Pool de conexiones, readers, Dapper (multi-mapping, `QueryMultiple`), convivencia con EF Core y transacciones compartidas |
+| [03. Rendimiento y concurrencia](04-data-access-and-transactions/03-rendimiento-y-concurrencia/README.md) | Concurrencia optimista a fondo, índices y planes de ejecución, consultas lentas y N+1 en producción, paginación por cursor · [ejercicios](04-data-access-and-transactions/03-rendimiento-y-concurrencia/Ejercicios.md) |
 
-Planificado: concurrencia optimista en profundidad, rendimiento SQL, índices y planes de ejecución.
+Planificado: caché (`IMemoryCache`, `HybridCache`, Redis).
 
 ### 5. Testing y Calidad ([`/05-testing-y-calidad`](05-testing-y-calidad/README.md))
 

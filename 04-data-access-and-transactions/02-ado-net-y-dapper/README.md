@@ -57,4 +57,4 @@ Todas las lecciones siguen las 13 secciones de la wiki. Los ejemplos usan SQLite
 
 ## Después de esta carpeta
 
-Continúa con concurrencia optimista, índices y planes de ejecución. Para organizar dónde va cada herramienta en una aplicación, mira [CQRS y mediator](../../02-architecture-and-design-patterns/06-cqrs-y-mediator/README.md): commands con EF Core, queries que pueden usar Dapper.
+Continúa con [Rendimiento y concurrencia](../03-rendimiento-y-concurrencia/README.md): concurrencia optimista a fondo, índices y planes de ejecución. Para organizar dónde va cada herramienta en una aplicación, mira [CQRS y mediator](../../02-architecture-and-design-patterns/06-cqrs-y-mediator/README.md): commands con EF Core, queries que pueden usar Dapper.

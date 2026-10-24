@@ -9,6 +9,7 @@ Este bloque estudia persistencia con criterio: modelado, consultas, cambios de e
 | --- | --- |
 | [01. Entity Framework Core](01-entity-framework-core/README.md) | ADO.NET y ORMs, `DbContext`, modelado, migraciones, relaciones, carga de datos y CRUD |
 | [02. ADO.NET y Dapper](02-ado-net-y-dapper/README.md) | ADO.NET a fondo, Dapper, convivencia con EF Core y transacciones |
+| [03. Rendimiento y concurrencia](03-rendimiento-y-concurrencia/README.md) | Concurrencia optimista, índices y planes, consultas lentas en producción y paginación |
 
 -----
 
@@ -22,4 +23,4 @@ dominio -> caso de uso -> persistencia -> base de datos
 -----
 
 ## Próximos temas
-Concurrencia optimista en profundidad, rendimiento SQL, índices y planes de ejecución.
+Caché: `IMemoryCache`, `HybridCache`, Redis e invalidación.

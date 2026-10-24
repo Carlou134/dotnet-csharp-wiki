@@ -60,4 +60,4 @@ Todas las lecciones siguen las 13 secciones de la wiki y usan el agregado `Pedid
 
 ## Después de esta carpeta
 
-El siguiente paso del roadmap es que esta arquitectura aguante carga: concurrencia optimista, índices y planes de ejecución, y caché (planificado en el bloque de acceso a datos). Más adelante, cuando un sistema crece en áreas separables, el monolito modular es el paso previo a considerar microservicios.
+El siguiente paso es que esta arquitectura aguante carga: [Rendimiento y concurrencia](../../04-data-access-and-transactions/03-rendimiento-y-concurrencia/README.md) (concurrencia optimista, índices, consultas lentas y paginación) y, después, caché. Más adelante, cuando un sistema crece en áreas separables, el monolito modular es el paso previo a considerar microservicios.
